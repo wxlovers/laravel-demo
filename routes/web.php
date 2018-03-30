@@ -33,4 +33,6 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('auth/', 'Auth\AuthController@github');
+Route::get('auth/github', 'Auth\AuthController@github');
+
+Roure::get('auth/rebase', 'Auth\AuthController@rebase');
