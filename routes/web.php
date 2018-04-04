@@ -21,18 +21,18 @@ Route::get('contact', 'SitesController@contact');
 // Route::get('articles/{id}', 'ArticlesController@show');
 // Route::post('articles', 'ArticlesController@store');
 // Route::get('articles/{id}/edit', 'ArticlesController@edit');
-Route::get('articles/{$article}', function(\App\Article $article){
-    return $article;
-});
+// Route::get('articles/{$article}', function(\App\Article $article){
+//     return $article;
+// });
+Route::resource('articles', 'ArticlesController');
+// Route::get('auth/login', 'Auth\AuthController@getLogin');
+// Route::post('auth/login', 'Auth\AuthController@postLogin');
 
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+// Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// Route::get('auth/github', 'Auth\AuthController@github');
 
-Route::get('auth/github', 'Auth\AuthController@github');
-
-Roure::get('auth/rebase', 'Auth\AuthController@rebase');
+// Route::get('auth/rebase', 'Auth\AuthController@rebase');
