@@ -14,23 +14,30 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'SitesController@index');
-Route::get('contact', 'SitesController@contact'); 
+// Route::get('/user/{user}', function(App\User $user){
+//     return $user;
+// })->middleware('throttle:3');
+// Route::get('/', 'SitesController@index');
+// Route::get('contact', 'SitesController@contact'); 
 // Route::get('articles', 'ArticlesController@index');
 // Route::get('articles/create', 'ArticlesController@create');
 // Route::get('articles/{id}', 'ArticlesController@show');
 // Route::post('articles', 'ArticlesController@store');
 // Route::get('articles/{id}/edit', 'ArticlesController@edit');
-Route::get('articles/{$article}', function(\App\Article $article){
-    return $article;
-});
+// // Route::resourses('articles/{$article}', function(\App\Article $article){
+// //     return $article;
+// // });
 
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
+// Route::get('auth/login', 'Auth\AuthController@getLogin');
+// Route::post('auth/login', 'Auth\AuthController@postLogin');
 
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('auth/', 'Auth\AuthController@github');
+// Route::get('auth/', 'Auth\AuthController@github');
+// Auth::routes();
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

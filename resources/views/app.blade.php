@@ -24,11 +24,5 @@
 
         </div>
 
-<!---  Field --->
-<div class="form-group">
-    {!! Form::label('', ':') !!}
-    {!! Form::text('', null, ['class' => 'form-control']) !!}
-</div>
-
 </body>
 </html>
